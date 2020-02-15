@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby 
+
+require '../lib/Billboard100/billboard100.rb'
+
+Billboard100::CLI.new.call

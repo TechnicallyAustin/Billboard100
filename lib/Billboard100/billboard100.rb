@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby 
+require_relative './version'
+require_relative './cli'
+require_relative './scrapper'
+require_relative './song'
+require_relative './artist'
+require 'pry'
+require 'nokogiri'
+require 'open-uri'
