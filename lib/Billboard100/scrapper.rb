@@ -1,10 +1,9 @@
-require_relative './billboard100'
-require_relative './billboard100.rb'
-require 'nokogiri'
+require_relative '../Billboard100/billboard100'
+require 'nokogiri' 
 require 'pry'
 require 'open-uri'
 
-class FinalScrapper
+class Billboard100::FinalScrapper
     attr_accessor :song, :chart_elements, :rank, :artist, :peak, :peakdate, :song, :scrapper_name
     @@scrapped_ranks = []
     @@scrapped_songs = []
@@ -44,7 +43,9 @@ class FinalScrapper
         #Data output class methods 
         
     def self.song_groups
-        @@song_groups
+        @@song_groups.each do |song|
+            song = Song.new("song")
+        end
     end
 
     def self.artists
@@ -88,8 +89,8 @@ class FinalScrapper
 
 
 
-
-
-scrape = FinalScrapper.new
-binding.pry
 end
+
+scrape = Billboard100::FinalScrapper.new
+
+binding.pry

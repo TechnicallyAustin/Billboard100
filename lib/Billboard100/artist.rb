@@ -1,15 +1,14 @@
-require_relative './artist.rb'
-require_relative './billboard100.rb'
+require_relative '../Billboard100/billboard100.rb'
 
 
 
-class Artist < FinalScrapper
+class Artist 
     @@all = []
 attr_reader :name, :song, :peak, :peak_date, :FinalScrapper 
 def initialize(name)
 @name = name 
 @songs = []
-@@all << self
+
 end
 
 def songs
@@ -21,12 +20,15 @@ end
 
 
 def self.chart_art
-    FinalScrapper.artists
+    Billboard100::FinalScrapper.artists
     #binding.pry 
 end
 
-def self.create(artist)
+def self.create
+    Artist.chart_art.each do |artist|
     artist = Artist.new(artist)
+    @@all << artist 
+    end
 end
 
 def self.all
