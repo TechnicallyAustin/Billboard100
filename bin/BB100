@@ -3,3 +3,5 @@
 require '../lib/Billboard100/billboard100.rb'
 
 Billboard100::CLI.new.call
+Billboard100::CLI.new.prompt
+Billboard100::CLI.new.list_songs
