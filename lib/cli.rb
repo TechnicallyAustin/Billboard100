@@ -50,7 +50,8 @@ def prompt
             list_songs
             prompt
             exit_msg
-    elsif song_info == nil 
+    elsif song_info == nil
+        puts "looks like there was a problem, try again?"
         prompt
         exit_msg
     end
