@@ -1,10 +1,12 @@
 # CLi controller
-
-class Billboard100::CLI
+require_relative './environment'
+require_relative  './scraper'
+require 'pry'
+class CLI
 
 def call
 greet_user
-Billboard100::Scraper.get_data
+Scraper.get_data
 end
 
 def greet_user

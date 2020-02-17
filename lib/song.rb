@@ -1,5 +1,5 @@
 
-class Billboard100::Song 
+class Song 
 @@all = []
 attr_accessor :name, :peak, :artist, :rank 
 def initialize(rank, name, artist, peak)
