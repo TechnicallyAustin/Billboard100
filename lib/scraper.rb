@@ -11,9 +11,7 @@ def self.get_data
         limited_array.each do |song|
             name = song.css("div.ye-chart-item__title").text.split("\n").delete_if{|i| i == "" || i == " "}.join
             artist = song.css("div.ye-chart-item__artist").text.split("\n").delete_if{|i| i == "" || i == " "}.join
-            peak = song.css("span.decade-end-chart-item__peak-info-data").text
-            binding.pry
-        
+            peak = song.css("span.decade-end-chart-item__peak-info-date").text.split(" Peak Date").join
             rank = song.css("div.ye-chart-item__rank").text.split("\n").delete_if{|i| i == "" || i == " "}.join
             Song.new(rank, name, artist, peak)
         end
