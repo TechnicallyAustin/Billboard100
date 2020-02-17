@@ -2,7 +2,7 @@
 require_relative './environment'
 require_relative  './scraper'
 require 'pry'
-class CLI
+class Billboard100::CLI
 
 def call
 greet_user
@@ -12,6 +12,6 @@ end
 def greet_user
     puts "hello!"
 end
-binding.pry 
+
 
 end

@@ -5,5 +5,5 @@ require 'nokogiri'
 require 'open-uri'
 
 
-require "./scrapper"
-require "./song"
+require_relative "./scraper"
+require_relative "./song"
