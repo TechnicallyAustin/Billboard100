@@ -1,4 +1,4 @@
-require_relative 'lib/Billboard100/version'
+require_relative './Billboard100/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "Billboard100"
