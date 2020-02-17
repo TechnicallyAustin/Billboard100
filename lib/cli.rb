@@ -27,7 +27,6 @@ end
 
 def prompt 
     msg =  "If you want to know more about the song, type in the name of the song!"
-    return_msg = "Type 'Top' To see the list again."
     exit_msg = "Type Done! to quit the program."
     error = "Sorry, there was a problem, can you try again?"
     puts msg 
@@ -46,7 +45,6 @@ def prompt
             puts " Artist:          #{song_info.artist} "
             puts " Peak:                #{song_info.peak} "
             puts "============================"
-            puts return_msg
             input
             song_info
             list_songs
